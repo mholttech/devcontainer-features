@@ -17,7 +17,10 @@ This repository also contains a sample Dev Container for easily testing in your 
 
 ## How To
 
-The How-To instructions are split into two sections. Section 1 is performed within WSL and Section 2 is performed within Windows.
+The How-To instructions are split into three sections. Section 1 is performed within WSL, Section 2 is performed within Windows, and Section 3 goes over testing.
+
+**Update 8/2/23**
+Updated Section 3 to include copying nodecerts.pem to .devcontainer
 
 # Section 1: WSL
 
@@ -57,4 +60,5 @@ Before starting this section, take `c:\temp\nodecerts.pem` and place it wherever
 You can now test this out for yourself. This should work natively in Windows as well as inside of your Ubuntu WSL instance. I recommend using WSL for all repositories due to a variety of issues with mounting local paths into containers. See [here](https://docs.docker.com/desktop/troubleshoot/topics/#topics-for-windows), [here](https://github.com/docker/for-win/issues/6742), [here](https://github.com/microsoft/WSL/issues/873) & [here](https://github.com/microsoft/WSL/issues/4197).
 
 1. Open repository in VSCode and then tell VSCode to open in Dev Container.
+2. Copy the `nodecerts.pem` file created in Section 1 into `.devcontainer/nodecerts.pem`
 2. You can verify it succeeded by running `terraform --version`, which is the single feature being installed by this repo.
